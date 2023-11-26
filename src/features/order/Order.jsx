@@ -50,7 +50,7 @@ function Order() {
       {
         cart.map(
           (item)=>{
-            <OrderItem item={item} key={item.id} />
+            <OrderItem item={item} key={item.pizzaId} />
           }
         )
       }
