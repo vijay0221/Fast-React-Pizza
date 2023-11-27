@@ -5,6 +5,8 @@ import Cart from "./features/cart/Cart";
 import CreateOrder, {
   action as CreateActionOrder,
 } from "./features/order/CreateOrder";
+
+import {action as updateOrderAction } from './features/order/UpdateOrder'
 import Order, { loader as OrderLoader } from "./features/order/Order";
 import Applayout from "./ui/Applayout";
 import Error from "./ui/Error";
@@ -43,6 +45,7 @@ const router = createBrowserRouter([
         element: <Order />,
         loader: OrderLoader,
         errorElement: <Error />,
+        action:updateOrderAction,
       },
     ],
   },
